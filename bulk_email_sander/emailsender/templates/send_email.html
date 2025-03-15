@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Bulk Email</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center text-primary">📩 Send Bulk Email</h2>
+        <p class="text-muted text-center">Send bulk emails easily from your Django app.</p>
+
+        <!-- FORM STARTS HERE -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">📧 Recipients (comma-separated emails)</label>
+                <input type="text" name="recipients" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">📌 Subject</label>
+                <input type="text" name="subject" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">📝 Message</label>
+                <textarea name="body" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="attachment" class="form-label">📎 Attach File (Optional)</label>
+                <input type="file" name="attachment" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">🚀 Send Emails</button>
+        </form>
+        <!-- FORM ENDS HERE -->
+
+    </div>
+    
+    <footer class="text-center text-muted mt-4">
+        <p>Designed by <strong>Mukut May Dutta</strong></p>
+    </footer>
+
+    <!-- Bootstrap JS (optional for better interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
