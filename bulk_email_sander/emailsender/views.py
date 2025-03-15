@@ -8,7 +8,7 @@ def send_bulk_email(request):
         recipients = request.POST.get('recipients', '').split(',')
         subject = request.POST.get('subject', '')
         message = request.POST.get('body', '')
-        from_email = "mukutdutta45@icloud.com"
+        from_email = "your email address"
 
         # Handle file upload
         uploaded_file = request.FILES.get('attachment')  # Get the uploaded file
