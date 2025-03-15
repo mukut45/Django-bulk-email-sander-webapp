@@ -45,7 +45,7 @@ EMAIL_HOST = 'smtp.mail.me.com'  # iCloud SMTP server
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'mukutdutta45@icloud.com'  # Your iCloud email
-EMAIL_HOST_PASSWORD = 'tehi-lqsn-emjz-pugd'  # Use an App-Specific Password
+EMAIL_HOST_PASSWORD = 'type_the_app_specific_password_here'  # Use an App-Specific Password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
